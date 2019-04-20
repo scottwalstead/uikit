@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var titleLabel: UILabel!
     var bioText: UITextView!
     var button: UIButton!
+    var loadTableButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,15 @@ class ViewController: UIViewController {
         button.titleLabel?.text = "Change color"
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         view.addSubview(button)
+
+        loadTableButton = UIButton()
+        loadTableButton.translatesAutoresizingMaskIntoConstraints = false
+        loadTableButton.backgroundColor = .green
+        loadTableButton.titleLabel?.font = UIFont.systemFont(ofSize: 10, weight: .bold)
+        loadTableButton.titleLabel?.textAlignment = .center
+        loadTableButton.titleLabel?.text = "Load table"
+        loadTableButton.addTarget(self, action: #selector(loadTable), for: .touchUpInside)
+        view.addSubview(loadTableButton)
 
         setupConstraints()
 //        blahImage.
@@ -92,6 +102,13 @@ class ViewController: UIViewController {
             button.heightAnchor.constraint(equalToConstant: 30),
             button.widthAnchor.constraint(equalToConstant: 100)
             ])
+
+        NSLayoutConstraint.activate([
+            loadTableButton.bottomAnchor.constraint(equalTo: button.topAnchor, constant: -10),
+            loadTableButton.centerXAnchor.constraint(equalTo: button.centerXAnchor),
+            loadTableButton.heightAnchor.constraint(equalToConstant: 30),
+            loadTableButton.widthAnchor.constraint(equalToConstant: 100)
+            ])
     }
 
     @objc func buttonTapped() {
@@ -107,6 +124,17 @@ class ViewController: UIViewController {
 //        }
     }
 
+    @objc func loadTable() {
+        print("tapped button")
+
+        let table = Table()
+        navigationController?.pushViewController(table, animated: true)
+        //        if bioText.backgroundColor == .black {
+        //            bioText.backgroundColor = .blue
+        //        } else {
+        //            bioText.backgroundColor = .black
+        //        }
+    }
 }
 
 extension ViewController : SelectColorDelegate {
