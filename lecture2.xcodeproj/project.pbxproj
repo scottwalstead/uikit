@@ -12,6 +12,7 @@
 		F6785794226A5FA600471A07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6785792226A5FA600471A07 /* Main.storyboard */; };
 		F6785796226A5FA800471A07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6785795226A5FA800471A07 /* Assets.xcassets */; };
 		F6785799226A5FA800471A07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6785797226A5FA800471A07 /* LaunchScreen.storyboard */; };
+		F67857A3226AB70700471A07 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67857A2226AB70700471A07 /* ColorPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F6785795226A5FA800471A07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6785798226A5FA800471A07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F678579A226A5FA800471A07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F67857A2226AB70700471A07 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				F6785795226A5FA800471A07 /* Assets.xcassets */,
 				F6785797226A5FA800471A07 /* LaunchScreen.storyboard */,
 				F678579A226A5FA800471A07 /* Info.plist */,
+				F67857A2226AB70700471A07 /* ColorPickerViewController.swift */,
 			);
 			path = lecture2;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			files = (
 				F6785791226A5FA600471A07 /* ViewController.swift in Sources */,
 				F678578F226A5FA600471A07 /* AppDelegate.swift in Sources */,
+				F67857A3226AB70700471A07 /* ColorPickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -96,13 +96,22 @@ class ViewController: UIViewController {
 
     @objc func buttonTapped() {
         print("tapped button")
-        if bioText.backgroundColor == .black {
-            bioText.backgroundColor = .blue
-        } else {
-            bioText.backgroundColor = .black
-        }
 
+        let colorPickerViewController = ColorPickerViewController()
+        colorPickerViewController.selectColorDelegate = self
+        navigationController?.pushViewController(colorPickerViewController, animated: true)
+//        if bioText.backgroundColor == .black {
+//            bioText.backgroundColor = .blue
+//        } else {
+//            bioText.backgroundColor = .black
+//        }
     }
 
+}
+
+extension ViewController : SelectColorDelegate {
+    func didSelectColor(color: UIColor) {
+        bioText.backgroundColor = color
+    }
 }
 
